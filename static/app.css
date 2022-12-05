@@ -1,0 +1,56 @@
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+h1{
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: cornflowerblue;
+}
+
+p{
+    font-size: 1.5em;
+    color: darkblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.board{
+    font-size: 2em;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+td{
+    width: 10%;
+}
+
+form{
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: purple;
+}
+
+h3{
+    font-size: 1.2em;
+    color: darkblue;
+}
+
+ul{
+    color: darkblue;
+}
+
+button{
+    background-color: lightskyblue;
+    padding: 10px;
+    border-radius: 40%;
+    color: darkblue;
+}
+
+input{
+    background-color: lightblue;
+    width: 15%;
+    padding: 5px;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}

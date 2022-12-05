@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle</title>
+    <link rel="stylesheet" href="static/app.css">
+</head>
+<body>
+    <section id="boggle">
+    <h1>Boggle!</h1>
+    <p>High Score: <b class="high-score">{{ highscore }}</b></p>
+    <p>Games Played: <b class="games-played">{{ games_played }}</b></p>
+
+    <table class="board">
+        <tbody>
+            {% for row in board %}
+            <tr>
+                {% for col in row %}
+                <td>{{col}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="score">Score : <b class="score-num">0</b></p>
+    <p class="timer">Time Left: <b class="timer-num">60</b> seconds</p>
+
+    <form method="POST" class="new-word">
+        <label>Guess a word:
+            <input class="word" name="word" onfocus="this.value=''">
+        </label>
+        <button>Submit</button>
+    </form>
+
+    <h3 class="message"></h3>
+    <ul class="words-list"></ul>
+    </section>
+
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/boggle.js"></script>
+    <script src="http://unpkg.com/jquery"></script>
+    <script> let new_game = new BoggleComponents('boggle',60) 
+    </script>
+</body>
+</html>
