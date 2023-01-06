@@ -33,8 +33,8 @@ class FlaskTests(TestCase):
                     ['A','B','C','D','E'],
                     ['A','R','C','D','E']
                 ]
-        response = self.client.get('/guess-word?word=bet')
-        self.assertEqual(response.json['result'], 'ok')
+        res1 = self.client.get('/guess-word?word=bet')
+        self.assertEqual(res1.json['result'], 'ok')
         res2 = client.get('/guess-word?word=bar')
         self.assertEqual(res2.json['result'],'ok')
         res3 = client.get('/guess-word?word=deer')
@@ -43,9 +43,10 @@ class FlaskTests(TestCase):
 
     def test_wrong_word(self):
         self.client.get('/')
-        res = self.client.get('/guess-word?word=incorrect')
-        self.assertEqual(res.json['result'],'not-on-board')
+        res1 = self.client.get('/guess-word?word=incorrect')
+        self.assertEqual(res1.json['result'],'not-on-board')
+        res2 = self.client.get('/guess-word?word=dksjn')
+        self.assertEqual(res2.json['result','not-on-board'])
 
 
 
-    # TODO -- write tests for every view function / feature!
